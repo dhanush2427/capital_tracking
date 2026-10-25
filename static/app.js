@@ -32,7 +32,7 @@ function renderKPIs(data) {
     document.getElementById("total-expense").textContent = formatINR(data.total_expense);
     document.getElementById("total-investment").textContent = formatINR(data.total_investment);
     document.getElementById("net-cash").textContent = formatINR(data.net_cash);
-
+    document.getElementById("projected-wealth").textContent = formatINR(data.projected_wealth);
     document.getElementById("savings-rate").textContent = `${data.savings_rate}%`;
     document.getElementById("investment-rate").textContent = `${data.investment_rate}%`;
 }
