@@ -84,7 +84,7 @@ def get_analytics():
     total_income = sum(r["amount"] for r in rows if r["type"] == "Income")
     total_expense = sum(r["amount"] for r in rows if r["type"] == "Expense")
     total_investment = sum(r["amount"] for r in rows if r["type"] == "Investment")
-    
+    projected_wealth = round(total_investment * (1.12 ** 10), 2)
     net_cash = total_income - total_expense - total_investment
     
     # Financial Ratios
@@ -105,6 +105,7 @@ def get_analytics():
         "total_income": total_income,
         "total_expense": total_expense,
         "total_investment": total_investment,
+        "projected_wealth": projected_wealth,
         "net_cash": net_cash,
         "investment_rate": investment_rate,
         "expense_rate": expense_rate,
